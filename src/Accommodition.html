@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mithi Resort & Spa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap"rel="stylesheet"/>
+    <link href="./output.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              kadwa: ["Kadwa", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Kadwa", serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w-full h-screen relative">
+      <header class="fixed top-0 left-0 w-full bg-[#B1BB92] h-[80px] shadow-lg flex justify-between items-center px-6 z-50">
+          <!-- Logo -->
+          <img src="./assets/images/logo.webp" alt="Mithi Resort Logo" class="object-contain w-16 h-[60px]" />
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex gap-8 items-center justify-center w-full">
+            <a href="index.html" class="py-2 text-lg text-white bg-transparent hover:text-gray-900 transition-all max-sm:px-3 max-sm:py-1 max-sm:text-xs font-kalnia">Home</a>
+            <a href="Accommodition.html" class="py-2 text-lg text-white bg-transparent hover:text-gray-900 transition-all max-sm:px-3 max-sm:py-1 max-sm:text-xs font-kalnia">Accommodation</a>
+            <a href="Amenities&Activities.html" class="py-2 text-lg text-white bg-transparent hover:text-gray-900 transition-all max-sm:px-3 max-sm:py-1 max-sm:text-xs font-kalnia">Amenities & Activities</a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button class="text-3xl text-white cursor-pointer md:hidden" id="menu-btn" aria-label="Toggle menu">
+            ☰
+          </button>
+
+          <!-- Mobile Menu -->
+          <nav id="mobile-menu" class="hidden absolute top-[80px] left-0 w-full bg-[#B1BB92] bg-opacity-95 p-5 shadow-lg z-40">
+            <a href="index.html" class="block py-2 text-lg text-white hover:opacity-80 transition-all">Home</a>
+            <a href="Accommodition.html" class="block py-2 text-lg text-white hover:opacity-80 transition-all">Accommodation</a>
+            <a href="Amenities&Activities.html" class="block py-2 text-lg text-white hover:opacity-80 transition-all">Amenities & Activities</a>
+            <a href="#" class="block py-2 text-lg text-white hover:opacity-80 transition-all">Contact</a>
+            <a href="Booking.html" class="block py-2 text-lg text-white hover:opacity-80 transition-all">Booking</a>
+          </nav>
+      </header>
+
+  <!-- Add padding to prevent content from hiding under the sticky header -->
+  <div class="pt-[80px]"></div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative w-full h-[calc(100vh-80px)]">
+      <!-- Background Image with Overlay -->
+      <div class="absolute inset-0 bg-black/50"></div>
+      <img
+        src="./assets/images/master-shot.webp"
+        alt="Mithi Resort Aerial View"
+        class="w-full h-full object-cover flex justify-center"
+        style="image-rendering: -webkit-optimize-contrast;"
+        loading="lazy"
+      />
+  
+      <!-- Hero Content -->
+      <div class="absolute inset-0 flex items-center justify-center text-center px-6">
+        <h1 class="text-white text-6xl font-kadwa drop-shadow-md text-[clamp(2rem,5vw,4rem)]">
+          Accommodation
+        </h1>
+      </div>
+    </section>
+  
+    <!-- Experience Section -->
+    <section class="mt-24 flex flex-col items-center px-6">
+      <h1 class="z-10 -mt-7 text-5xl text-black max-md:text-4xl max-sm:text-3xl">
+        Experience
+      </h1>
+  
+      <p class="mt-16 mb-12 text-xl leading-8 text-center text-black max-w-[1174px] max-md:px-5 max-md:text-lg max-sm:text-base max-sm:leading-6 font-kalnia">
+        Located in the heart of Island of Panglao, Mithi Resort and Spa is your
+        perfect escape into a world of wonder. Explore our stunning surroundings and
+        uncover the hidden gems that make every moment unforgettable. Whether you're
+        an adventurer seeking an adrenaline rush or a traveler looking for pure
+        relaxation, we have something just for you.
+      </p>
+  
+      <!-- White Sand Beach Section -->
+      <section class="flex flex-col justify-center items-center w-full bg-[#96a75f] py-14 px-6 max-md:py-10">
+        <div class="max-w-[832px] w-full">
+          <div class="flex gap-5 max-md:flex-col max-md:gap-10">
+            <article class="w-full md:w-6/12">
+              <div class="flex flex-col items-center text-xl text-white">
+                <h2 class="p-4 text-4xl leading-none text-center">WHITE SAND BEACH</h2>
+                <p class="mt-9 leading-8 text-center max-md:mt-6">
+                  Surrounded by breathtaking landscapes and untouched beauty, Mithi
+                  Resort and Spa is the ultimate retreat. Relax, explore, and make
+                  it your own personal paradise.
+                </p>
+                <button
+                  class="px-10 py-3 text-sm mt-14 w-44 max-w-full text-black bg-white max-md:mt-10"
+                >
+                  More View
+                </button>
+              </div>
+            </article>
+  
+            <figure class="w-full md:w-6/12">
+              <img
+                src="./assets/images/m1.webp"
+                alt="White Sand Beach at Mithi Resort"
+                class="w-full h-auto object-cover aspect-square"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+    </section>
+  
+    <!-- Image Gallery Section -->
+    <section class="mt-16 flex flex-col items-center w-full px-6">
+      <div class="w-full max-w-[1440px]">
+        <div class="flex flex-col items-center">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 w-full">
+            <figure class="h-[297px] w-full md:h-[351px]">
+              <img src="./assets/images/17x-1.webp" alt="Resort view 1" class="w-full h-full object-cover rounded-[4px]"/>
+            </figure>
+            <figure class="h-[351px] w-full max-md:hidden">
+              <img src="./assets/images/1.webp" alt="Resort view 2" class="w-full h-full object-cover rounded-[4px]"/>
+            </figure>
+            <figure class="h-[297px] w-full max-md:hidden">
+              <img src="./assets/images/7x.webp" alt="Resort view 3" class="w-full h-full object-cover rounded-[4px]"/>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Cambagat Cave and Mithi Spa Section -->
+    <section class="flex flex-col items-center py-24 px-6 w-full max-w-6xl mx-auto">
+      <div class="flex flex-col gap-20 max-md:gap-12 max-sm:gap-10 w-full">
+        <!-- Cambagat Cave Feature -->
+        <article class="flex flex-col md:flex-row items-center gap-16 max-lg:gap-12 max-md:gap-10">
+          <img
+            src="./assets/images/new.webp"
+            alt="Cambagat Cave"
+            class="w-full md:w-[50%] h-auto object-cover rounded-lg shadow-lg"
+          />
+          <div class="flex flex-col gap-6 text-center items-center w-full md:w-[50%]">
+            <h2 class="text-4xl font-semibold text-black max-md:text-3xl">CAMBAGAT CAVE</h2>
+            <p class="text-lg leading-8 text-black max-md:text-base">
+              Thrill-seekers don't need to venture far for adventure. Located within
+              Mithi Resort and Spa's expansive 14-hectare grounds is the Cambagat
+              Cave, where you can dive and swim depending on the tides.
+            </p>
+            <button
+              class="px-5 py-2 text-lg font-medium text-white bg-black bg-opacity-80 hover:bg-opacity-100 transition-all rounded-lg shadow-md w-40"
+            >
+              More View
+            </button>
+          </div>
+        </article>
+  
+        <!-- Mithi Spa Feature -->
+        <article class="flex flex-col md:flex-row items-center gap-16 max-lg:gap-12 max-md:gap-10">
+          <div class="flex flex-col gap-6 text-center items-center w-full md:w-[50%]">
+            <h2 class="text-4xl font-semibold text-black max-md:text-3xl">MITHI SPA</h2>
+            <p class="text-lg leading-8 text-black max-md:text-base">
+              Restore your mind and body in Panglao's most popular and loved Spa.
+              Let our specially trained therapists melt all your troubles away and
+              discover for yourself why people keep coming back to Mithi Spa.
+            </p>
+            <button
+              class="px-5 py-2 text-lg font-medium text-white bg-black bg-opacity-80 hover:bg-opacity-100 transition-all rounded-lg shadow-md w-40"
+            >
+              More View
+            </button>
+          </div>
+          <img
+            src="./assets/images/m5.webp"
+            alt="Mithi Spa"
+            class="w-full md:w-[50%] h-auto object-cover rounded-lg shadow-lg"
+          />
+        </article>
+      </div>
+    </section>
+  </main>
+    <!-- Footer -->
+    <footer>
+      <section class="flex flex-col items-center px-8 py-8 w-full bg-[#2b2f1e] bg-opacity-90 max-md:px-4">
+        <div class="w-full max-w-[1024px] flex flex-wrap justify-between text-white text-sm">
+          
+          <!-- Menu -->
+          <nav class="w-1/3 max-md:w-full mb-4">
+            <h2 class="text-lg">Menu</h2>
+            <ul class="flex flex-col gap-3 mt-3">
+              <li><a href="#" class="hover:underline">Home</a></li>
+              <li><a href="#" class="hover:underline">Accommodation</a></li>
+              <li><a href="#" class="hover:underline">Amenities</a></li>
+              <li><a href="#" class="hover:underline">Booking</a></li>
+              <li><a href="#" class="hover:underline">Contact</a></li>
+            </ul>
+          </nav>
+
+          <!-- Logo -->
+          <div class="w-1/3 flex justify-center max-md:w-full mb-4">
+            <img src="./assets/images/mn.jpg" alt="Mithi Resort Logo" class="object-contain w-32">
+          </div>
+
+          <!-- Address -->
+          <address class="w-1/3 max-md:w-full text-sm not-italic">
+            <h3 class="text-lg">Address</h3>
+            <p>Bingag Dauis, Panglao Island, Bohol, Philippines</p>
+
+            <h3 class="mt-4 text-lg">Hotline</h3>
+            <p><a href="tel:+63917304022" class="hover:underline">+63917 3040222</a></p>
+
+            <h3 class="mt-4 text-lg">Email</h3>
+            <p><a href="mailto:info@mithiresort.com" class="hover:underline">info@mithiresort.com</a></p>
+          </address>
+        </div>
+      </section>
+
+      <section class="py-4 px-6 w-full text-center text-xs text-white bg-black">
+        <p>COPYRIGHT © 2020 ALL RIGHTS RESERVED MITHI RESORT & SPA</p>
+      </section>
+    </footer>
+
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!menuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+          mobileMenu.classList.add("hidden");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
